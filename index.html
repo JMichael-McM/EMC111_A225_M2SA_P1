@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M2 SA PART1 - TABACON</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Courier New', monospace; overflow: hidden; background: #7a8a6f; }
+        #canvas-container { width: 100vw; height: 100vh; position: relative; }
+        
+        #loading-screen, #controls {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+        }
+        #loading-screen.hidden { display: none; }
+        #controls { top: 10px; left: 10px; transform: none; }
+        .title { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div id="canvas-container"></div>
+    
+    <div id="loading-screen">
+        <div id="loading-title">Loading...</div>
+        <div id="loading-percent">0%</div>
+    </div>
+
+    <div id="controls">
+        <div class="title">🎮 Controls</div>
+        <div>🖱️ Hold LEFT CLICK + Drag to rotate</div>
+        <div>🖱️ SCROLL to zoom in/out</div>
+    </div>
+
+    <script src="three.js"></script>
+    <script src="GLTFLoader.js"></script>
+    <script src="main.js"></script>
+    
+</body>
+</html>
